@@ -4,8 +4,11 @@
 
 **Wireless RS-485 / USB / TCP / WebSocket bridge**
 
-[![Latest Release](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?label=Latest)](https://github.com/AtkinEngineering/interfaceNode/releases/latest)
-[![Latest Pre-release](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&label=Latest%20Pre-release)](https://github.com/AtkinEngineering/interfaceNode/releases)
+[![Latest](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?label=Latest)](https://github.com/AtkinEngineering/interfaceNode/releases/latest)
+[![Latest Alpha](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*alpha*&label=Alpha)](https://github.com/AtkinEngineering/interfaceNode/releases)
+[![Latest Beta](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*beta*&label=Beta)](https://github.com/AtkinEngineering/interfaceNode/releases)
+[![Latest RC](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*rc*&label=RC)](https://github.com/AtkinEngineering/interfaceNode/releases)   
+
 [![Documentation](https://img.shields.io/badge/Documentation-guides%20%26%20reference-blue)](#documentation)
 [![Website](https://img.shields.io/badge/Website-atkin.engineering-blue)](https://www.atkin.engineering)
 [![Licence](https://img.shields.io/badge/Licence-Proprietary-red)](LICENSE)
