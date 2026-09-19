@@ -4,7 +4,8 @@
 
 **Wireless RS-485 / USB / TCP / WebSocket bridge**
 
-[![Latest Release](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&label=Latest%20Release)](https://github.com/AtkinEngineering/interfaceNode/releases)
+[![Latest Release](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?label=Latest)](https://github.com/AtkinEngineering/interfaceNode/releases/latest)
+[![Latest Pre-release](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&label=Latest%20Pre-release)](https://github.com/AtkinEngineering/interfaceNode/releases)
 [![Documentation](https://img.shields.io/badge/Documentation-guides%20%26%20reference-blue)](#documentation)
 [![Website](https://img.shields.io/badge/Website-atkin.engineering-blue)](https://www.atkin.engineering)
 [![Licence](https://img.shields.io/badge/Licence-Proprietary-red)](LICENSE)
@@ -146,8 +147,6 @@ no permission is granted to copy, modify, distribute, reverse engineer,
 or commercially exploit this software except as expressly authorised by
 Atkin Engineering - see [LICENSE](LICENSE) for the full terms.
 
----
-
 **© Copyright 2026 [Atkin Engineering](https://www.atkin.engineering). All Rights Reserved.** [^copyright]
 
 ---
@@ -155,4 +154,3 @@ Atkin Engineering - see [LICENSE](LICENSE) for the full terms.
 [^copyright] © Copyright 2026 [Atkin Engineering](https://www.atkin.engineering). All Rights Reserved. ABN: 42 715 025 348.   
 
 _Specifications are subject to change without notice. No representation or warranty as to the accuracy or completeness of the information included herein is given and any liability for any action in reliance thereon is disclaimed._
-
