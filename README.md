@@ -9,8 +9,8 @@
 [![Latest Beta](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*beta*&label=Beta&color=yellow)](https://github.com/AtkinEngineering/interfaceNode/releases)
 [![Latest RC](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*rc*&label=RC&color=blue)](https://github.com/AtkinEngineering/interfaceNode/releases)   
 
-[![Documentation](https://img.shields.io/badge/Documentation-lightgrey)](https://github.com/AtkinEngineering/interfaceNode)
-[![Website](https://img.shields.io/badge/Website-atkin.engineering-555)](https://www.atkin.engineering)
+[![Documentation](https://img.shields.io/badge/Documentation-blue)](https://github.com/AtkinEngineering/interfaceNode)
+[![Website](https://img.shields.io/badge/Website-atkin.engineering-lightblue)](https://www.atkin.engineering)
 [![Licence](https://img.shields.io/badge/Licence-Proprietary-lightgrey)](LICENSE)
 
 ## Overview
