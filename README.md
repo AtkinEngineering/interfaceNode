@@ -5,9 +5,9 @@
 **Wireless RS-485 / USB / TCP / WebSocket bridge**
 
 [![Stable](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?label=Stable&color=brightgreen)](https://github.com/AtkinEngineering/interfaceNode/releases/latest)
-[![Alpha](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*alpha*&label=Alpha&color=orange)](https://github.com/AtkinEngineering/interfaceNode/releases)
+[![RC](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*rc*&label=RC&color=blue)](https://github.com/AtkinEngineering/interfaceNode/releases)
 [![Beta](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*beta*&label=Beta&color=yellow)](https://github.com/AtkinEngineering/interfaceNode/releases)
-[![RC](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*rc*&label=RC&color=blue)](https://github.com/AtkinEngineering/interfaceNode/releases)  
+[![Alpha](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*alpha*&label=Alpha&color=orange)](https://github.com/AtkinEngineering/interfaceNode/releases)   
 
 [![Documentation](https://img.shields.io/badge/Documentation-blue)](https://github.com/AtkinEngineering/interfaceNode#documentation)
 [![Website](https://img.shields.io/badge/Website-atkin.engineering-lightblue)](https://www.atkin.engineering)
