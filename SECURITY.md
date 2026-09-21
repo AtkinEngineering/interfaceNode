@@ -4,9 +4,7 @@
 
 If you believe you have discovered a security vulnerability in interfaceNode, please do not open a public GitHub issue.
 
-Please contact:
-
-temp-pocket-3g@icloud.com
+Please contact: [temp-pocket-3g@icloud.com](mailto:temp-pocket-3g@icloud.com?subject=Report%20security%20vulnerability)
 
 Include:
 
