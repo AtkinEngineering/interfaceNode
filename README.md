@@ -9,7 +9,7 @@
 [![Beta](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*beta*&label=Beta&color=yellow)](https://github.com/AtkinEngineering/interfaceNode/releases)
 [![Alpha](https://img.shields.io/github/v/release/AtkinEngineering/interfaceNode?include_prereleases&filter=*alpha*&label=Alpha&color=orange)](https://github.com/AtkinEngineering/interfaceNode/releases)   
 
-[![Documentation](https://img.shields.io/badge/Documentation-blue)](https://github.com/AtkinEngineering/interfaceNode#documentation)
+[![Documentation](https://img.shields.io/badge/Documentation-blue)](https://github.com/AtkinEngineering/interfaceNode/blob/main/documents/)
 [![Website](https://img.shields.io/badge/Website-atkin.engineering-lightblue)](https://www.atkin.engineering)
 [![Licence](https://img.shields.io/badge/Licence-Proprietary-lightgrey)](https://github.com/AtkinEngineering/interfaceNode#licence)
 
@@ -21,7 +21,7 @@ interface is forwarded to the other three, live, with no PC or gateway
 software in between.
 
 With `Protocol aware` set to `Dynet`, traffic is validated as complete
-DyNet 1/DyNet 2 frames (checksummed, re-synchronised on invalid data)
+DyNet 1/DyNet 2 frames (check-summed, re-synchronised on invalid data)
 before being forwarded. Set to `None`, bytes pass through verbatim with no
 validation, for any other RS-485-based protocol.
 
@@ -41,11 +41,11 @@ companion app or desktop software required.
 
 ## Supported Interfaces
 
-| Interface | Notes |
-|---|---|
-| **USB CDC** | Direct USB CDC, no separate USB-serial driver required |
-| **RS-485** | Full or half duplex, set via a hardware jumper |
-| **TCP** | Multiple simultaneous clients, port configurable in the web UI |
+| Interface     | Notes                                                                                                                                  |
+| ------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **USB CDC**   | Direct USB CDC, no separate USB-serial driver required                                                                                 |
+| **RS-485**    | Full or half duplex, set via a hardware jumper                                                                                         |
+| **TCP**       | Multiple simultaneous clients, port configurable in the web UI                                                                         |
 | **WebSocket** | `/ws`, multiple simultaneous clients, its own dedicated server separate from the config UI - see [Network Services](#network-services) |
 
 Every interface is bridged the same way - a frame received on any one is
@@ -83,7 +83,7 @@ reachable while in configuration mode:
 - **Factory reset**: holding the button for 2 seconds resets all settings
   to their defaults and reboots
 - Every setting available in configuration mode is documented in the
-  [Manual](documents/MANUAL.pdf)
+  [Manual](documents)
 
 Configuration mode and normal bridge operation are mutually exclusive -
 the device runs as one or the other, and switching between them requires
@@ -112,12 +112,12 @@ network services:
 interfaceNode features a physical RS-485 transceiver (duplex mode set via
 a hardware jumper), USB CDC, and per-interface RGB status LEDs. Full
 electrical and mechanical specifications are in the
-[Datasheet](documents/DATASHEET.pdf).
+[Datasheet](documents/).
 
-## Documentation
+## Documentation (documentation)
 
-- **Manual** ([`documents/MANUAL.pdf`](documents/)) - operation, configuration, every setting available in configuration mode
-- **Datasheet** ([`documents/DATASHEET.pdf`](documents/DATASHEET.pdf)) - hardware specifications
+- **Manual** ([`documents`](documents/)) - operation, configuration, every setting available in configuration mode
+- **Datasheet** ([`documents`](documents/)) - hardware specifications
 
 ## Release Verification
 
@@ -150,10 +150,12 @@ no permission is granted to copy, modify, distribute, reverse engineer,
 or commercially exploit this software except as expressly authorised by
 Atkin Engineering - see [LICENSE](LICENSE) for the full terms.
 
+---
+
 **© Copyright 2026 [Atkin Engineering](https://www.atkin.engineering). All Rights Reserved.** [^copyright]
 
 ---
 
-[^copyright] © Copyright 2026 [Atkin Engineering](https://www.atkin.engineering). All Rights Reserved. ABN: 42 715 025 348.   
+[^copyright]: © Copyright 2026 [Atkin Engineering](https://www.atkin.engineering). All Rights Reserved. ABN: 42 715 025 348.
 
-_Specifications are subject to change without notice. No representation or warranty as to the accuracy or completeness of the information included herein is given and any liability for any action in reliance thereon is disclaimed._
+*Specifications are subject to change without notice. No representation or warranty as to the accuracy or completeness of the information included herein is given and any liability for any action in reliance thereon is disclaimed.*
