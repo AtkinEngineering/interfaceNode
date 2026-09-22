@@ -15,18 +15,11 @@
 
 ## Overview
 
-interfaceNode is Atkin Engineering's wireless RS-485 bridge. It bridges
-USB CDC, RS-485, TCP sockets, and WebSockets - data arriving on any one
-interface is forwarded to the other three, live, with no PC or gateway
-software in between.
+interfaceNode is Atkin Engineering's wireless RS-485 bridge. It bridges USB CDC, RS-485, TCP sockets, and WebSockets - data arriving on any one interface is forwarded to the other three, live, with no PC or gateway software in between.
 
-With `Protocol aware` set to `Dynet`, traffic is validated as complete
-DyNet 1/DyNet 2 frames (check-summed, re-synchronised on invalid data)
-before being forwarded. Set to `None`, bytes pass through verbatim with no
-validation, for any other RS-485-based protocol.
+With `Protocol aware` set to `Dynet`, traffic is validated as complete DyNet 1/DyNet 2 frames (check-summed, re-synchronised on invalid data) before being forwarded. Set to `None`, bytes pass through verbatim with no validation, for any other RS-485-based protocol.
 
-The device is configured entirely through its own web interface - no
-companion app or desktop software required.
+The device is configured entirely through its own web interface - no companion app or desktop software required.
 
 ## Features
 
@@ -48,8 +41,7 @@ companion app or desktop software required.
 | **TCP**       | Multiple simultaneous clients, port configurable in the web UI                                                                         |
 | **WebSocket** | `/ws`, multiple simultaneous clients, its own dedicated server separate from the config UI - see [Network Services](#network-services) |
 
-Every interface is bridged the same way - a frame received on any one is
-forwarded to every other, never back out the interface it arrived on.
+Every interface is bridged the same way - a frame received on any one is forwarded to every other, never back out the interface it arrived on.
 
 ## Firmware
 
@@ -68,31 +60,21 @@ Each release contains:
 
 ## Firmware Update
 
-To update the firmware, enter configuration mode with a single press of
-the system button, then open the device's web interface and upload the
-downloaded `.bin` from the Firmware section. No serial connection or
-additional software required.
+To update the firmware, enter configuration mode with a single press of the system button, then open the device's web interface and upload the downloaded `.bin` from the Firmware section. No serial connection or additional software required.
 
 ## Configuration
 
-The device is configured entirely through its own web interface, only
-reachable while in configuration mode:
+The device is configured entirely through its own web interface, only reachable while in configuration mode:
 
-- **Entering configuration mode**: a short press of the system button
-  reboots the device into it
-- **Factory reset**: holding the button for 2 seconds resets all settings
-  to their defaults and reboots
-- Every setting available in configuration mode is documented in the
-  [Manual](documents)
+- **Entering configuration mode**: a short press of the system button reboots the device into it
+- **Factory reset**: holding the button for 2 seconds resets all settings to their defaults and reboots
+- Every setting available in configuration mode is documented in the [Manual](documents)
 
-Configuration mode and normal bridge operation are mutually exclusive -
-the device runs as one or the other, and switching between them requires
-a reboot.
+Configuration mode and normal bridge operation are mutually exclusive - the device runs as one or the other, and switching between them requires a reboot.
 
 ## Network Services
 
-Alongside the bridge itself, interfaceNode runs several independent
-network services:
+Alongside the bridge itself, interfaceNode runs several independent network services:
 
 - **Web configuration UI** - JSON `/config` API, configuration mode only
 - **WebSocket bridge** (`/ws`) - a dedicated server, separate from the config UI, always available during normal bridge operation. DyNet 1/DyNet 2 frames can each be independently filtered from WebSocket delivery
@@ -102,17 +84,12 @@ network services:
 
 ## Protocol Support
 
-- **DyNet 1 & DyNet 2** - complete frames are checksum-validated and
-  re-synchronised on invalid data before being bridged
-- **Raw / passthrough** - `Protocol aware` set to `None` forwards every
-  byte verbatim, for any other RS-485-based protocol
+- **DyNet 1 & DyNet 2** - complete frames are checksum-validated and re-synchronised on invalid data before being bridged
+- **Raw / passthrough** - `Protocol aware` set to `None` forwards every byte verbatim, for any other RS-485-based protocol
 
 ## Hardware
 
-interfaceNode features a physical RS-485 transceiver (duplex mode set via
-a hardware jumper), USB CDC, and per-interface RGB status LEDs. Full
-electrical and mechanical specifications are in the
-[Datasheet](documents/).
+interfaceNode features a physical RS-485 transceiver (duplex mode set via a hardware jumper), USB CDC, and per-interface RGB status LEDs. Full electrical and mechanical specifications are in the [Datasheet](documents/).
 
 ## Documentation (documentation)
 
@@ -121,8 +98,7 @@ electrical and mechanical specifications are in the
 
 ## Release Verification
 
-Each release lists a SHA-256 checksum alongside its `.bin`. To verify a
-download before flashing it:
+Each release lists a SHA-256 checksum alongside its `.bin`. To verify a download before flashing it:
 
 ```
 # Linux
@@ -136,21 +112,13 @@ Compare the result against the checksum published on the release page.
 
 ## Support
 
-For product and general support enquiries, visit
-[www.atkin.engineering](https://www.atkin.engineering).
+For product and general support enquiries, visit [www.atkin.engineering](https://www.atkin.engineering) or email @ [temp-pocket-3g@icloud.com](mailto:temp-pocket-3g@icloud.com)
 
-To report a security vulnerability, do not open a public issue - see
-[SECURITY.md](SECURITY.md) for how to report it directly.
+To report a security vulnerability, do not open a public issue - see [SECURITY.md](SECURITY.md) for how to report it directly.
 
 ## Licence
 
-interfaceNode is proprietary firmware belonging to Atkin Engineering. The
-repository and its releases are publicly viewable and downloadable, but
-no permission is granted to copy, modify, distribute, reverse engineer,
-or commercially exploit this software except as expressly authorised by
-Atkin Engineering - see [LICENSE](LICENSE) for the full terms.
-
----
+interfaceNode contains proprietary firmware belonging to Atkin Engineering. The repository and its releases are publicly viewable and downloadable, but no permission is granted to copy, modify, distribute, reverse engineer, or commercially exploit this software except as expressly authorised by Atkin Engineering - see [LICENSE](LICENSE) for the full terms.
 
 **© Copyright 2026 [Atkin Engineering](https://www.atkin.engineering). All Rights Reserved.** [^copyright]
 
