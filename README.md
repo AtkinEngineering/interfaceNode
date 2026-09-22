@@ -116,7 +116,7 @@ electrical and mechanical specifications are in the
 
 ## Documentation
 
-- **Manual** ([`documents/MANUAL.pdf`](documents/MANUAL.pdf)) - operation, configuration, every setting available in configuration mode
+- **Manual** ([`documents/MANUAL.pdf`](documents/)) - operation, configuration, every setting available in configuration mode
 - **Datasheet** ([`documents/DATASHEET.pdf`](documents/DATASHEET.pdf)) - hardware specifications
 
 ## Release Verification
