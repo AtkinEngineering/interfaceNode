@@ -23,13 +23,14 @@ The device is configured entirely through its own web interface - no companion a
 
 ## Features
 
-- **Bridge**: USB CDC ↔ RS-485 ↔ TCP (multiple clients) ↔ WebSocket (multiple clients), DyNet-aware or raw passthrough
+- **Bridge**: USB CDC ↔ RS-485 ↔ TCP (up to 5 clients) ↔ WebSocket (up to 5 clients), DyNet-aware or raw passthrough
+- **WebSocket DyNet filtering**: choose which DyNet 1 / DyNet 2 opcodes reach WebSocket clients, from the web interface
 - **Web configuration UI**: JSON-based `/config` API, reachable only in configuration mode (mutually exclusive with normal bridge operation)
 - **WiFi**: Access Point or Station mode, including WPA2/WPA3-Enterprise (EAP, with EAP-FAST and uploadable RADIUS/CA certificate)
 - **System log**: recent log output, colour-coded by severity, viewable at `/systemlog.html` in configuration mode - a 128KB in-memory buffer that survives a normal reboot and clears only on a genuine cold boot or a fresh firmware update
 - **DyNet discovery beacon**: independent UDP responder (port 9998), separate from the bridge
 - **Status LEDs**: per-interface RGB (RS485, WiFi), a system-mode status LED (starting / config / AP / STA), LEDC-driven with configurable colour sequences
-- **OTA firmware updates** via the web UI
+- **OTA firmware updates** via the web UI, with automatic rollback if the new firmware fails to start
 - **IPv4 + IPv6** dual-stack
 
 ## Supported Interfaces
@@ -38,8 +39,8 @@ The device is configured entirely through its own web interface - no companion a
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | **USB CDC**   | Direct USB CDC, no separate USB-serial driver required                                                                                 |
 | **RS-485**    | Full or half duplex, set via a hardware jumper                                                                                         |
-| **TCP**       | Multiple simultaneous clients, port configurable in the web UI                                                                         |
-| **WebSocket** | `/ws`, multiple simultaneous clients, its own dedicated server separate from the config UI - see [Network Services](#network-services) |
+| **TCP**       | Up to 5 simultaneous clients, port configurable in the web UI                                                                          |
+| **WebSocket** | `/ws`, up to 5 simultaneous clients, its own dedicated server separate from the config UI - see [Network Services](#network-services)  |
 
 Every interface is bridged the same way - a frame received on any one is forwarded to every other, never back out the interface it arrived on.
 
@@ -60,7 +61,9 @@ Each release contains:
 
 ## Firmware Update
 
-To update the firmware, enter configuration mode with a single press of the system button, then open the device's web interface and upload the downloaded `.bin` from the Firmware section. No serial connection or additional software required.
+To update the firmware, enter configuration mode with a single press of the system button, then open the device's web interface and install the downloaded `.bin` from the Firmware section. No serial connection or additional software required.
+
+> **Note:** all settings, including WiFi, are restored to their defaults after a firmware update. Note your settings before updating - see the [Manual](documents/).
 
 ## Configuration
 
@@ -77,10 +80,10 @@ Configuration mode and normal bridge operation are mutually exclusive - the devi
 Alongside the bridge itself, interfaceNode runs several independent network services:
 
 - **Web configuration UI** - JSON `/config` API, configuration mode only
-- **WebSocket bridge** (`/ws`) - a dedicated server, separate from the config UI, always available during normal bridge operation. DyNet 1/DyNet 2 frames can each be independently filtered from WebSocket delivery
+- **WebSocket bridge** (`ws://<device>:8080/ws`) - a dedicated server, separate from the config UI, available during normal bridge operation. DyNet 1 and DyNet 2 frames can be filtered by type and by opcode before delivery to WebSocket clients
 - **System log** (`/systemlog.html`) - configuration mode only
 - **DyNet discovery beacon** - UDP responder on port 9998, independent of the bridge
-- **mDNS** - device reachable by hostname on the local network
+- **mDNS** - device reachable by hostname on the local network; advertises the TCP and WebSocket ports
 
 ## Protocol Support
 
@@ -91,7 +94,7 @@ Alongside the bridge itself, interfaceNode runs several independent network serv
 
 interfaceNode features a physical RS-485 transceiver (duplex mode set via a hardware jumper), USB CDC, and per-interface RGB status LEDs. Full electrical and mechanical specifications are in the [Datasheet](documents/).
 
-## Documentation (documentation)
+## Documentation
 
 - **Manual** ([`documents`](documents/)) - operation, configuration, every setting available in configuration mode
 - **Datasheet** ([`documents`](documents/)) - hardware specifications
