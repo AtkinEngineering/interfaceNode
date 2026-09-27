@@ -1,0 +1,13 @@
+{
+  "product": "interfaceNode",
+  "version": "1.2.0",
+  "build": "2609271539",
+  "release": "1.2.0+2609271539",
+  "logging": "clean",
+  "channel": "stable",
+  "prerelease": false,
+  "firmware": "interfaceNode-v1.2.0+2609271539.bin",
+  "sha256": "a5b09ec359baf5c6bfc26e808c99f9140ce261da94c43a27004ee53174ef55e7",
+  "released": "2026-09-27T15:39:44+10:00",
+  "pcb_revision": "B.0.x"
+}
