@@ -150,6 +150,8 @@ interfaceNode contains proprietary firmware belonging to Atkin Engineering. The 
 
 ---
 
-[^copyright]: © Copyright 2026 [Atkin Engineering](https://www.atkin.engineering). All Rights Reserved. ABN: 42 715 025 348.
-
 *Specifications are subject to change without notice. No representation or warranty as to the accuracy or completeness of the information included herein is given and any liability for any action in reliance thereon is disclaimed.*
+
+---
+
+[^copyright]: © Copyright 2026 [Atkin Engineering](https://www.atkin.engineering). All Rights Reserved. ABN: 42 715 025 348.
