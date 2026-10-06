@@ -1,0 +1,15 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=lf
+
+# Explicitly declare text files you want to always be normalized and converted
+# to native line endings on checkout.
+
+# Declare files that will always have LF line endings on checkout.
+*.txt text eol=lf
+*.md text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.clangd text eol=lf
+*.clang-format text eol=lf
+*.mermaid text eol=lf
+sdkconfig.* text eol=lf
